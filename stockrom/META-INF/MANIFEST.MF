@@ -1,0 +1,66 @@
+Manifest-Version: 1.0
+Created-By: 1.0 (Android SignApk)
+
+Name: splash.img
+SHA1-Digest: HVesZNKmFDvSDXVZ6g6P/yTv9jg=
+
+Name: system/build.prop
+SHA1-Digest: xtr2/r1FWyVtJszV+QyQbD+FO7E=
+
+Name: file_contexts
+SHA1-Digest: CRNUETLJlJVIPsRmaCzU4zaDizQ=
+
+Name: boot.img
+SHA1-Digest: +6DUw232C1eJLjduiDpvrD/5Hog=
+
+Name: install/bin/backuptool.functions
+SHA1-Digest: AMUx34wzX41eiSz5Dof4q4nyheE=
+
+Name: NON-HLOS.bin
+SHA1-Digest: Sk2yvXfcby/c/uGC+zmYwJWk6c0=
+
+Name: tz.mbn
+SHA1-Digest: O2Oo/VNG37J6BHyIpgsIq7K95A8=
+
+Name: META-INF/com/google/android/update-binary
+SHA1-Digest: cx9qX9VilC+qp62NwgtOz2V1MLk=
+
+Name: system.transfer.list
+SHA1-Digest: Em0VoESVEvQPwAyZyeODVlTxptA=
+
+Name: install/bin/otasigcheck.sh
+SHA1-Digest: NFapTSBtwVWQPq/18cXWpkr30VI=
+
+Name: rpm.mbn
+SHA1-Digest: f5sY6H54bhlZEnt8xzaVY1A9hx4=
+
+Name: system.patch.dat
+SHA1-Digest: 2jmj7l5rSw0yVb/vlWAYkK/YBwk=
+
+Name: emmc_appsboot.mbn
+SHA1-Digest: n4R5G0VkAUH5KyCwGyQEE4/B47c=
+
+Name: META-INF/com/google/android/updater-script
+SHA1-Digest: deYi0iiPdODpNlIW1hsdbMzzxTU=
+
+Name: sdi.mbn
+SHA1-Digest: Kn2eAPRYBSzvjBbLYYvCAkmZObA=
+
+Name: META-INF/com/android/otacert
+SHA1-Digest: 71Q6Rn2DDZl1zPDVaaeEHItd+Yg=
+
+Name: META-INF/com/android/metadata
+SHA1-Digest: aXhKjgp5+ezWoqY1gS2LpaYOKbY=
+
+Name: install/bin/backuptool.sh
+SHA1-Digest: Jal4puheCP06yuCgHVFmkJF1QWo=
+
+Name: META-INF/org/cyanogenmod/releasekey
+SHA1-Digest: eJIKuOWyms0pOrJairA/tHqOCQI=
+
+Name: system.new.dat
+SHA1-Digest: lw6MhpsBPz9kaVpPCrFmylWUK3A=
+
+Name: sbl1.mbn
+SHA1-Digest: F92RGTwstHNYxIBQzvSc4dl0LIQ=
+

@@ -1,0 +1,46 @@
+assert(getprop("ro.product.device") == "Z1" || getprop("ro.build.product") == "Z1" || abort("This package is for device: Z1; this device is " + getprop("ro.product.device") + "."););
+ui_print("Target: ZUK/ham/Z1:6.0.1/MOB31K/8bd29aee7e:userdebug/test-keys");
+ifelse(is_mounted("/system"), unmount("/system"));
+package_extract_dir("install", "/tmp/install");
+set_metadata_recursive("/tmp/install", "uid", 0, "gid", 0, "dmode", 0755, "fmode", 0644);
+set_metadata_recursive("/tmp/install/bin", "uid", 0, "gid", 0, "dmode", 0755, "fmode", 0755);
+mount("ext4", "EMMC", "/dev/block/bootdevice/by-name/system", "/system", "");
+run_program("/tmp/install/bin/backuptool.sh", "backup");
+unmount("/system");
+if is_mounted("/data") then
+package_extract_file("META-INF/org/cyanogenmod/releasekey", "/tmp/releasekey");
+run_program("/tmp/install/bin/otasigcheck.sh") != "31744" || abort("Can't install this package on top of incompatible data. Please try another package or run a factory reset");
+else
+mount("ext4", "EMMC", "/dev/block/bootdevice/by-name/userdata", "/data", "");
+package_extract_file("META-INF/org/cyanogenmod/releasekey", "/tmp/releasekey");
+run_program("/tmp/install/bin/otasigcheck.sh") != "31744" || abort("Can't install this package on top of incompatible data. Please try another package or run a factory reset");
+unmount("/data");
+endif;
+show_progress(0.750000, 0);
+ui_print("Patching system image unconditionally...");
+block_image_update("/dev/block/bootdevice/by-name/system", package_extract_file("system.transfer.list"), "system.new.dat", "system.patch.dat");
+ui_print("Verifying the updated system image...");
+if range_sha1("/dev/block/bootdevice/by-name/system", "50,0,32767,32768,32770,32897,32899,33411,65535,65536,65538,98304,98306,98433,98435,98947,131071,131072,131074,163840,163842,163969,163971,164483,196607,196608,196610,229376,229378,229505,229507,230019,261990,262144,262146,294912,294914,295041,295043,327680,327682,360448,360450,393216,393218,425984,425986,458752,458754,491520,491522") == "970e8c869b013f3f64695a4f0ab166ca55942b70" then
+if range_sha1("/dev/block/bootdevice/by-name/system", "70,32767,32768,32770,32897,32899,33411,65535,65536,65538,66050,97792,98304,98306,98433,98435,98947,131071,131072,131074,131586,163328,163840,163842,163969,163971,164483,196607,196608,196610,197122,228864,229376,229378,229505,229507,230019,261990,262144,262146,262658,294400,294912,294914,295041,295043,295555,327168,327680,327682,328194,359936,360448,360450,360962,392704,393216,393218,393730,425472,425984,425986,426498,458240,458752,458754,459266,491008,491520,491522,492034") == "f253e66f605b9ef7613c7a36a807fedd096c65ef" then
+ui_print("Verified the updated system image.");
+else
+  abort("system partition has unexpected non-zero contents after OTA update");
+endif;
+else
+  abort("system partition has unexpected contents after OTA update");
+endif;
+show_progress(0.020000, 10);
+mount("ext4", "EMMC", "/dev/block/bootdevice/by-name/system", "/system", "");
+run_program("/tmp/install/bin/backuptool.sh", "restore");
+unmount("/system");
+show_progress(0.050000, 5);
+package_extract_file("boot.img", "/dev/block/bootdevice/by-name/boot");
+show_progress(0.200000, 10);
+ui_print("Writing radio image...");
+ifelse((sha1_check(read_file("EMMC:/dev/block/bootdevice/by-name/aboot:424948:9f84791b45640141f92b20b01b2404138fc1e3b7")) != ""),(ui_print("/dev/block/bootdevice/by-name/aboot already up to date")),(package_extract_file("emmc_appsboot.mbn", "/dev/block/bootdevice/by-name/aboot")));
+ifelse((sha1_check(read_file("EMMC:/dev/block/bootdevice/by-name/rpm:194600:7f9b18e87e786e1959127b7cc7369563503d871e")) != ""),(ui_print("/dev/block/bootdevice/by-name/rpm already up to date")),(package_extract_file("rpm.mbn", "/dev/block/bootdevice/by-name/rpm")));
+ifelse((sha1_check(read_file("EMMC:/dev/block/bootdevice/by-name/dbi:18112:2a7d9e00f458052cef8c16cb618bc202499939b0")) != ""),(ui_print("/dev/block/bootdevice/by-name/dbi already up to date")),(package_extract_file("sdi.mbn", "/dev/block/bootdevice/by-name/dbi")));
+ifelse((sha1_check(read_file("EMMC:/dev/block/bootdevice/by-name/tz:347496:3b63a8fd5346dfb27a047c88a60b08abb2bde40f")) != ""),(ui_print("/dev/block/bootdevice/by-name/tz already up to date")),(package_extract_file("tz.mbn", "/dev/block/bootdevice/by-name/tz")));
+ifelse((sha1_check(read_file("EMMC:/dev/block/bootdevice/by-name/splash:575488:1d57ac64d2a6143bd20d7559ea0e8fff24eff638")) != ""),(ui_print("/dev/block/bootdevice/by-name/splash already up to date")),(package_extract_file("splash.img", "/dev/block/bootdevice/by-name/splash")));
+ifelse((sha1_check(read_file("EMMC:/dev/block/bootdevice/by-name/modem:59704832:4a4db2bd77dc6f2fdcfee182fb3998c095a4e9cd")) != ""),(ui_print("/dev/block/bootdevice/by-name/modem already up to date")),(package_extract_file("NON-HLOS.bin", "/dev/block/bootdevice/by-name/modem")));
+ifelse((sha1_check(read_file("EMMC:/dev/block/bootdevice/by-name/sbl1:287372:17dd91193c2cb47358c48050cef49ce1d9742c84")) != ""),(ui_print("/dev/block/bootdevice/by-name/sbl1 already up to date")),(package_extract_file("sbl1.mbn", "/dev/block/bootdevice/by-name/sbl1")));

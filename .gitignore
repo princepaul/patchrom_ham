@@ -1,0 +1,7 @@
+stockrom.zip
+out/*
+security/*
+temp/*
+*~
+.delete-zip-file-when-clean
+ROM/

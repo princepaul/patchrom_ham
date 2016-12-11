@@ -1,0 +1,205 @@
+===================================
+Since Thu Nov 17 18:43:57 UTC 2016
+===================================
+
+   * android
+1f48db5 cm: Remove mm-dash repo
+
+   * device/zuk/ham
+e9512af ham: Clean up bluetooth config
+5195187 ham: Remove obsolete vendorsetup script
+
+   * frameworks/base
+7a9c884 zygote: Allow device to append extra whitelisted paths
+
+   * packages/apps/Messaging
+c25973a Messaging: Fix incorrect equality check
+
+   * packages/apps/Settings
+34a780d Settings: Hide Reset action if Battery LED is not multicolor
+
+   * packages/inputmethods/LatinIME
+af0c9e4 LatinIME: Remove gesture preference if gesture lib is unavailable
+
+   * cts
+d54cd8d merge in marshmallow-cts-release history after reset to marshmallow-cts-dev
+a34d54c Merge "DO NOT MERGE: Bump CTS and CTS Verifier to 6.0_r13" into marshmallow-cts-dev
+8a7001e DO NOT MERGE: Bump CTS and CTS Verifier to 6.0_r13
+5706e23 Merge "Merge "Add CTS test for CVE_2016_2463 This test verifies whether a mp4 file limits  the memory usage during decode media" into lollipop-mr1-cts-dev am: 78aa98cbb8" into marshmallow-cts-dev
+000e1b1 Merge "Add CTS test for CVE_2016_2463 This test verifies whether a mp4 file limits the memory usage during decode media am: 931bb65066" into marshmallow-cts-dev
+d73ab61 Merge "Add CTS test for CVE_2016_2463 This test verifies whether a mp4 file limits  the memory usage during decode media" into lollipop-mr1-cts-dev am: 78aa98cbb8
+7e464f9 Add CTS test for CVE_2016_2463 This test verifies whether a mp4 file limits the memory usage during decode media am: 931bb65066
+78aa98c Merge "Add CTS test for CVE_2016_2463 This test verifies whether a mp4 file limits  the memory usage during decode media" into lollipop-mr1-cts-dev
+
+===================================
+Since Sat Nov 12 12:29:18 UTC 2016
+===================================
+
+   * build
+e06132c Revert "qcom: Select Sony display/media variants for Sony devices"
+
+   * frameworks/base
+fe0a5ee SettingsLib: Fix possible NPEs
+6d2ff1d zygote: Add /proc/ged to the FD whitelist
+
+   * frameworks/opt/telephony
+b51f0cc SubscriptionInfoUpdater: Unbreak usage of TelephonyPlugin
+ca30c6a MSIM: Pass slotId to EVENT_SIM_LOCKED_QUERY_ICCID_DONE
+4fe3e8d MSIM: Change access modifier of handleSimLoaded
+
+   * packages/apps/Settings
+bbd02a6 Settings: Make proximity wake string more accurate
+
+   * system/core
+656154a init: Fix possible open file pointer
+
+   * vendor/cm
+a36653b config: common: Remove obsolete RomManager props
+9d73aa1 apns: Remove loop and bpl mobile
+f375ac5 apns: Add Reliance Jio APNs
+8c6cc93 vendor_cm: Vodafone TR: Fix mobile data on first boot
+3d3b3bf Fix Truphone APN
+65c1819 Add a new APN for new mcc/mnc assigned to Truphone
+
+   * cts
+f040cc1 Merge "fix android.hardware.camera2.cts.CameraManagerTest#testManagerGetDeviceIdList for TV" into marshmallow-cts-dev
+ef2f416 Merge "fix android.graphics2#android.graphics2.cts.TextureViewTest#testTextureViewActivity for TV" into marshmallow-cts-dev
+9c62603 Merge "AdaptivePlaybackTest: dequeue more output buffers at the end." into marshmallow-cts-dev
+af466e3 Merge "Merge "Test: Fix testFindAll result listener not set issue" into lollipop-mr1-cts-dev am: 548f71f142" into marshmallow-cts-dev
+4006f9d Merge "Test: Fix testFindAll result listener not set issue am: 69c73541a7" into marshmallow-cts-dev
+de5966a Merge "Test: Fix testFindAll result listener not set issue" into lollipop-mr1-cts-dev am: 548f71f142
+9e39b14 Test: Fix testFindAll result listener not set issue am: 69c73541a7
+548f71f Merge "Test: Fix testFindAll result listener not set issue" into lollipop-mr1-cts-dev
+69c7354 Test: Fix testFindAll result listener not set issue
+f3ee584 Merge "Merge "Test: fix WebView testFindNext flakyness" into lollipop-mr1-cts-dev am: 9f7059f0f8" into marshmallow-cts-dev
+9da5e4d Merge "Test: fix WebView testFindNext flakyness am: 77f169c80d" into marshmallow-cts-dev
+9810bb2 Merge "Test: fix WebView testFindNext flakyness" into lollipop-mr1-cts-dev am: 9f7059f0f8
+cc8825b Test: fix WebView testFindNext flakyness am: 77f169c80d
+9f7059f Merge "Test: fix WebView testFindNext flakyness" into lollipop-mr1-cts-dev
+4beabff Merge "Merge "Don't include ScreenPinning test on auto" into lollipop-mr1-cts-dev am: 70649a6f9e" into marshmallow-cts-dev
+40a5a27 Merge "Don't include ScreenPinning test on auto am: be2b17c293" into marshmallow-cts-dev
+8d90ef5 Merge "Don't include ScreenPinning test on auto" into lollipop-mr1-cts-dev am: 70649a6f9e
+685648f Don't include ScreenPinning test on auto am: be2b17c293
+70649a6 Merge "Don't include ScreenPinning test on auto" into lollipop-mr1-cts-dev
+5b300bc Merge "DO NOT MERGE: Updating CTS Security Patch Month to "11" for November 2016" into marshmallow-cts-dev
+798ea48 Merge "Merge "PlayVideoActivity: update comments for ENABLE_PASS_DELAY" into lollipop-mr1-cts-dev am: 7ecee98066" into marshmallow-cts-dev
+118d988 Merge "PlayVideoActivity: update comments for ENABLE_PASS_DELAY am: 0b8bed432c" into marshmallow-cts-dev
+d4a32d7 Merge "PlayVideoActivity: update comments for ENABLE_PASS_DELAY" into lollipop-mr1-cts-dev am: 7ecee98066
+615c5fb PlayVideoActivity: update comments for ENABLE_PASS_DELAY am: 0b8bed432c
+d6f6321 Merge "Merge "streamquality: reduce ENABLE_PASS_DELAY to 5 seconds" into lollipop-mr1-cts-dev am: ee5668e042" into marshmallow-cts-dev
+a1f6909 Merge "streamquality: reduce ENABLE_PASS_DELAY to 5 seconds am: c705f34f0c" into marshmallow-cts-dev
+2cd7545 Merge "streamquality: reduce ENABLE_PASS_DELAY to 5 seconds" into lollipop-mr1-cts-dev am: ee5668e042
+39b873e streamquality: reduce ENABLE_PASS_DELAY to 5 seconds am: c705f34f0c
+7ecee98 Merge "PlayVideoActivity: update comments for ENABLE_PASS_DELAY" into lollipop-mr1-cts-dev
+ee5668e Merge "streamquality: reduce ENABLE_PASS_DELAY to 5 seconds" into lollipop-mr1-cts-dev
+0b8bed4 PlayVideoActivity: update comments for ENABLE_PASS_DELAY
+c705f34 streamquality: reduce ENABLE_PASS_DELAY to 5 seconds
+49b45f0 DO NOT MERGE: Updating CTS Security Patch Month to "11" for November 2016
+
+===================================
+Since Tue Nov  8 06:22:12 UTC 2016
+===================================
+
+   * android
+8fc75b9 default.xml: cm: Update to 6.0.1_r72
+
+   * bootable/recovery
+16d358b Fix log text placement.
+
+   * build
+00e9db5 kernel: Auto-set prefix based on KERNEL_ARCH
+6236695 Merge tag 'android-6.0.1_r74' into HEAD
+c5ac547 build: qcom_target: Enable BOARD_USES_ADRENO
+5a8b106 releasetools: Rebuild recovery when signing target images
+
+   * device/qcom/common
+7a61d2f power: msm8937: Remove display_hint_sent usage
+c59f8cd power: msm8937: Improve boost values
+
+   * external/boringssl
+1c725f9 Merge tag 'android-6.0.1_r74' into HEAD
+
+   * external/libavc
+eb80228 Merge tag 'android-6.0.1_r74' into HEAD
+
+   * external/libvpx
+8ba7fb7 Merge tag 'android-6.0.1_r74' into HEAD
+
+   * external/sepolicy
+e7cd330 Merge tag 'android-6.0.1_r74' into HEAD
+
+   * frameworks/av
+26c5fa3 Merge tag 'android-6.0.1_r74' into HEAD
+1c6e16c Allow to use baseline profile for AVC recording
+
+   * frameworks/base
+73406be frameworks/base: Addition of Changes for ZeroBalance feature
+c15736bb NotificationManager: Concentrate LED light capabilities at a single location
+c7d2fb7 Add CMSDK resource APK to Zygote FD whitelist
+7c18f21 am: Fix mismerge
+996c5b9 Merge tag 'android-6.0.1_r74' into HEAD
+8ec45de batteryservice: Remove remnants of CAF's HVDCP changes
+
+   * hardware/qcom/audio/default
+a1200fb Merge tag 'android-6.0.1_r74' into HEAD
+
+   * hardware/qcom/audio-caf/msm8916
+a5a1ed2 Fix potential overflow in Visualizer effect
+
+   * hardware/qcom/audio-caf/msm8952
+6c83742 Fix potential overflow in Visualizer effect
+
+   * hardware/qcom/audio-caf/msm8974
+09faa0b Fix potential overflow in Visualizer effect
+
+   * hardware/qcom/audio-caf/msm8994
+7a99535 Fix potential overflow in Visualizer effect
+
+   * hardware/qcom/audio-caf/msm8996
+7227e87 Fix potential overflow in Visualizer effect
+
+   * hardware/qcom/media-caf/msm8937
+6ca4889 venc: Fix VQZip issue
+eb7926c Revert "venc: Disable building vqzip into the encoder for OSS"
+
+   * hardware/ril
+37cd685 Merge tag 'android-6.0.1_r74' into HEAD
+
+   * hardware/ti/omap4
+98079ac omap4: Fix screencast
+
+   * libcore
+1b7c367 Merge tag 'android-6.0.1_r74' into HEAD
+
+   * packages/apps/Bluetooth
+6213dab Merge tag 'android-6.0.1_r74' into HEAD
+
+   * packages/apps/Email
+4b3982a Merge tag 'android-6.0.1_r74' into HEAD
+
+   * packages/apps/Settings
+c83e96c lights: Use NotificationManager to figure out LED capabilities
+f6d341d Settings: Fix mismerge
+9f5f2fb Merge tag 'android-6.0.1_r74' into HEAD
+
+   * packages/providers/DownloadProvider
+2e7c315 Merge tag 'android-6.0.1_r74' into HEAD
+
+   * packages/providers/TelephonyProvider
+8f137e7 Merge tag 'android-6.0.1_r74' into HEAD
+
+   * system/core
+85f740e Merge tag 'android-6.0.1_r74' into HEAD
+
+   * system/media
+c37b3f8 Merge tag 'android-6.0.1_r74' into HEAD
+
+   * vendor/cm
+615d84b version: Set version string to 13.0.4 to reflect security update
+
+   * cts
+84c3bee Merge "Fix StagefrightTest" into marshmallow-cts-dev
+d21dfe0 Merge "Revert "DO NOT MERGE: Add CTS For bug - 13225149"" into marshmallow-cts-dev
+3816bed Fix StagefrightTest
+0484750 Revert "DO NOT MERGE: Add CTS For bug - 13225149"
+
